@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
-const API_URL = "http://31.97.228.29:5288/api/bitmap";
+const API_URL =
+  window.location.hostname === "localhost"
+    ? "/api/bitmap"
+    : `http://${window.location.hostname}:5288/api/bitmap`;
 
 const fontWeights = ["ExtraLight", "Light", "Regular", "Medium", "Bold"];
 const scripts = [
@@ -78,7 +81,6 @@ export const ApiPlayground: React.FC = () => {
     <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 py-4 px-2">
       <div className="max-w-5xl mx-auto bg-white/90 rounded-2xl shadow-xl p-8">
         <h2 className="text-3xl font-extrabold text-indigo-700 mb-2 tracking-tight flex items-center gap-2">
-          
           Bitmap API Playground
         </h2>
         <p className="text-gray-500 mb-6">
