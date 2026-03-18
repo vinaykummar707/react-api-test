@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
-const API_URL = "/api/bitmap";
+const API_URL = "http://31.97.228.29:5288/api/bitmap";
 
 const fontWeights = ["ExtraLight", "Light", "Regular", "Medium", "Bold"];
 const scripts = [
