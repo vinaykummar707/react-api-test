@@ -29,6 +29,7 @@ export const ApiPlayground: React.FC = () => {
   const [params, setParams] = useState({
     text: "",
     height: 16,
+    font: "",
     weight: "Regular",
     script: "english",
     stroke: 1,
@@ -119,6 +120,18 @@ export const ApiPlayground: React.FC = () => {
               value={params.height}
               onChange={handleChange}
               className="w-full border border-indigo-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400 outline-none transition"
+            />
+          </div>
+           <div>
+            <label className="block font-semibold text-gray-700 mb-1">
+              Font
+            </label>
+            <input
+              name="font"
+              value={params.font}
+              onChange={handleChange}
+              className="w-full border border-indigo-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400 outline-none transition"
+              placeholder="Optional font name"
             />
           </div>
           <div>
